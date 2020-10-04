@@ -5,7 +5,8 @@ open FSharpTestGrounds.Reflection
 
 [<StructuredFormatDisplay("{AsString}")>]
 type TetrationBase =
-    Float of float | Bigint of bigint
+    | Float of float
+    | Bigint of bigint
     override this.ToString () =
         match this with
         | Float f -> f.ToString()
