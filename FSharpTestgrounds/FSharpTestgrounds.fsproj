@@ -10,6 +10,9 @@
         <Compile Include="Reflection.fs" />
         <Compile Include="Examples\Tetration.fs" />
         <Compile Include="Examples\Tree Search.fs" />
+        <Compile Include="Examples\Breadth First Search.fs" />
+        <Compile Include="Examples\Fibonacci.fs" />
+        <Compile Include="Examples\Pattern Matching.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
