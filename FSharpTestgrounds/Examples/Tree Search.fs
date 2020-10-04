@@ -1,4 +1,4 @@
-﻿module FSharpTestGrounds.Examples.Tree_Search
+﻿module FSharpTestGrounds.Examples.``Tree Search``
 
 open FSharpTestGrounds.Reflection
 
@@ -17,6 +17,12 @@ let rec searchTree value tree =
     | Some t when value < t.value -> searchTree value t.left
     | Some t when value > t.value -> searchTree value t.right
     | _ -> None
+    
+let rec bfs pred queue =
+    match queue with
+    | x :: _ when pred x -> Some x
+    | x :: xs -> bfs pred (xs @ Option.toList x.left @ Option.toList x.right)
+    | [] -> None
 
 let constructTree () =
     [ 12; 246; 312; 56; 32; 5; 10; 12 ]
@@ -37,4 +43,11 @@ let ``Search a tree for an existing value`` () =
 let ``Search a tree for a missing value`` () =
     constructTree ()
     |> searchTree 621
+    |> printfn "%A"
+
+[<ReflectionTarget>]
+let ``Perform a breadth first search for an existing value`` () =
+    [constructTree ()
+    |> Option.get]
+    |> bfs (fun x -> x.value = 312)
     |> printfn "%A"
