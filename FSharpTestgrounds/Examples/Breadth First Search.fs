@@ -1,9 +1,6 @@
 ﻿module FSharpTestgrounds.Examples.``Breadth First Search``
 
-type Node<'a> = {
-    value: 'a
-    children: Node<'a> list
-}
+type Node<'a> = { value: 'a; children: Node<'a> list }
 
 let rec bfs pred queue =
     match queue with

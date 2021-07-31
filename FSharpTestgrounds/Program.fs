@@ -6,7 +6,11 @@ open FSharpTestGrounds.Reflection
 let main argv =
     let rec inner () =
         let methods = getTargetMethods ()
-        (chooseMethod methods).Invoke (obj, Array.empty) |> ignore
+
+        (chooseMethod methods).Invoke(obj, Array.empty)
+        |> ignore
+
         inner ()
+
     inner ()
     0 // return an integer exit code

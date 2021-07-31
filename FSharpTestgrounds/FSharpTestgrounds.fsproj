@@ -13,10 +13,23 @@
         <Compile Include="Examples\Breadth First Search.fs" />
         <Compile Include="Examples\Fibonacci.fs" />
         <Compile Include="Examples\Pattern Matching.fs" />
+        <Compile Include="Examples\Parallel.fs" />
+        <Compile Include="Examples\Tickets.fs" />
+        <Compile Include="Examples\FizzBuzz.fs" />
+        <Compile Include="Examples\Computation Expression.fs" />
+        <Compile Include="Examples\Blackjack.fs" />
+        <Compile Include="Examples\OperatorAbuse.fs" />
+        <Compile Include="Examples\Stuff.fs" />
+        <Compile Include="Examples\Ackermann.fs" />
+        <Compile Include="Examples\Events.fs" />
+        <Compile Include="Examples\Shuffle.fs" />
+        <Compile Include="Examples\Vectorisation.fs" />
         <Compile Include="Program.fs" />
+        <Content Include="NewFile1.txt" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
       <PackageReference Include="XPlot.Plotly" Version="3.0.1" />
     </ItemGroup>
 
